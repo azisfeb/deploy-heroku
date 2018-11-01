@@ -9,4 +9,6 @@ const app = express()
 app.set('views', path.join(__dirname))
 app.set('view engine', 'twig')
 
+app.use('/assets', express.static(path.join(__dirname, '../assets')))
+
 module.exports = app
