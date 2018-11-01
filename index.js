@@ -1,10 +1,6 @@
-const express = require('express')
+'use strict'
+
+const app = require('./app')
 const port = process.env.PORT || 4000
 
-const app = express()
-
-app.get('/', (req, res) => {
-    res.send('hi... this is cool!')
-})
-
-app.listen(port, () => console.log('app is running...'))
+app.listen(port, () => console.log(`server is running on port:${port}`))
