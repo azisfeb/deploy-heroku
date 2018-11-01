@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use('/assets', express.static(path.join(__dirname, '../assets')))
 
-app.use('/', (req, res) => res.render('layout-backend', {
+app.get('/backend', (req, res) => res.render('layout-backend', {
     grettings: 'Welcome guyssssss....'
 }))
 
