@@ -5,8 +5,13 @@ const express    = require('express')
 const mongoose   = require('mongoose')
 const bodyParser = require('body-parser')
 const logger     = require('morgan')
+const CONFIG     = require('../config')
 
 const app = express()
+
+mongoose.connect(`mongodb://${CONFIG.DB_USER}:${CONFIG.DB_PASSWORD}@ds249623.mlab.com:49623/${CONFIG.DB_NAME}`, {
+    useNewUrlParser: true
+})
 
 app.set('views', path.join(__dirname))
 app.set('view engine', 'twig')
