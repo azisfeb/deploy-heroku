@@ -1,6 +1,6 @@
 {% include "../../layout-backend.twig" %}
 {% block content %}
-    <div class="container">
+    <div class="container-table">
         <div class="row">
             <div class="col-md-12">
                 <form action="/backend/user/create" method="POST">
@@ -17,8 +17,8 @@
                             <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
                         </div>
                     <div class="form-group">
-                        <label for="username">Username </label>
-                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
+                        <label for="username">Address </label>
+                        <textarea type="text" class="form-control" id="address" name="address">Enter address</textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
