@@ -3,6 +3,13 @@
     <div class="container-table">
         <div class="row">
             <div class="col-md-12">
+                <h3 class="title">User Form</h3>
+
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
                 <form action="/backend/user/create" method="POST">
                     <div class="form-group">
                         <label for="name">Name </label>
@@ -18,9 +25,10 @@
                         </div>
                     <div class="form-group">
                         <label for="username">Address </label>
-                        <textarea type="text" class="form-control" id="address" name="address">Enter address</textarea>
+                        <textarea type="text" class="form-control" id="address" name="address" rows="5" placeholder="Enter address"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                    <a href="/backend/user" class="btn btn-warning btn-sm">Back</a>
                 </form>
             </div>
         </div>

@@ -11,3 +11,11 @@ body {
 .title{
     margin-bottom: 10px;
 }
+
+.showing-data-table .dataTables_info {
+    text-align: right;
+}
+
+.text-center-pagination .dataTables_paginate {
+    text-align: center!important;
+}
