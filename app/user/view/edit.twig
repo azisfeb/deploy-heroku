@@ -1,0 +1,37 @@
+{% include "../../layout-backend.twig" %}
+{% block content %}
+    <div class="container-table">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="title">Edit User Form</h3>
+
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <form action="/backend/user/update" method="POST">
+                    <input type="hidden" name="id" id="id" value="{{ user._id }}">
+                    <div class="form-group">
+                        <label for="name">Name </label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" value="{{ user.name }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username </label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" value="{{ user.username }}">
+                    </div>
+                    <div class="form-group">
+                            <label for="password">Password </label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+                        </div>
+                    <div class="form-group">
+                        <label for="username">Address </label>
+                        <textarea type="text" class="form-control" id="address" name="address" rows="5" placeholder="Enter address">{{ user.address }}</textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                    <a href="/backend/user" class="btn btn-warning btn-sm">Back</a>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

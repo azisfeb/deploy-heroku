@@ -6,7 +6,6 @@ const get = (req, res) => {
     User
      .find()
      .then((user) => {
-         console.log(user)
          res.render('user/view/user_list', {
              user
          })

@@ -5,11 +5,11 @@
         <table id="table-user" class="table table-hover table-bordered">
             <thead>
                 <tr>
-                    <th>No</th>
-                    <th>First Name</th>
-                    <th>Username</th>
+                    <th width="20">No</th>
+                    <th width="200">First Name</th>
+                    <th width="200">Username</th>
                     <th>Address</th>
-                    <th>Action</th>
+                    <th width="100">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,7 +21,10 @@
                         <td>{{ usr.name|title }}</td>
                         <td>{{ usr.username }}</td>
                         <td>{{ usr.address }}</td>
-                        <td>edit / delete</td>
+                        <td>
+                            <a href="/backend/user/edit/{{ usr._id }}" class="btn btn-warning btn-sm">edit</a> | 
+                            <a href="/backend/user/delete/{{ usr.id }}" class="btn btn-danger btn-sm">delete</a>
+                        </td>
                     </tr>
                 {% endfor %}
             </tbody>
