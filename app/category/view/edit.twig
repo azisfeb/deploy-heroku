@@ -1,0 +1,29 @@
+{% include "../../layout-backend.twig" %}
+{% block content %}
+    <div class="container-table">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="title">Edit Category Form</h3>
+
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <form action="/backend/category/update" method="POST">
+                    <input type="hidden" name="id" id="id" value="{{ categories._id }}">
+                    <div class="form-group">
+                        <label for="name">Name </label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" value="{{ categories.name }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Description </label>
+                        <textarea type="text" class="form-control" id="description" name="description" rows="5" placeholder="Enter address">{{ categories.description }}</textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                    <a href="/backend/category" class="btn btn-warning btn-sm">Back</a>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

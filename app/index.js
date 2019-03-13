@@ -27,5 +27,6 @@ app.get('/backend', (req, res) => res.render('layout-backend', {
 
 //init and add app so that the middleware function run..
 require('./user').init(app)
+require('./category').init(app)
 
 module.exports = app

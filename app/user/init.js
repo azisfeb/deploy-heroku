@@ -9,7 +9,7 @@ const initUser = (app) => {
     app.post('/backend/user/create', controller._create)
     app.get('/backend/user/edit/(:id)', controller._openEdit)
     app.post('/backend/user/update', controller._update)
-    app.get('/backend/user/delete/(:id)', controller._deleteUser) 
+    app.get('/backend/user/delete/(:id)', controller._deleteUser)
 }
 
 module.exports = initUser

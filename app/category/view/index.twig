@@ -1,0 +1,36 @@
+{% include "../../layout-backend.twig" %}
+{% block content %}
+    <div class="container-table">
+        <h3 class="title">Category List</h3> {# <a href="/backend/user/create" class="btn btn-primary btn-sm btn-new">new</a> #}
+        <table id="table-category" class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th width="20">No</th>
+                    <th width="200">Name</th>
+                    <th>Description</th>
+                    <th width="100">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% set no = 0 %}
+                {% for ctg in categories %}
+                {% set no = no + 1 %}
+                    <tr>
+                        <td>{{ no }}</td>
+                        <td>{{ ctg.name|title }}</td>
+                        <td>{{ ctg.description }}</td>
+                        <td>
+                            <a href="/backend/category/edit/{{ ctg._id }}" class="btn btn-warning btn-sm">edit</a> | 
+                            <a href="/backend/category/delete/{{ ctg.id }}" class="btn btn-danger btn-sm" onclick="return confirm('are you sure want delete this data?')">delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+<script>
+    $('.navbar-nav .nav-item').removeClass('active');
+    $('#category').parent().addClass('active');
+
+</script>
